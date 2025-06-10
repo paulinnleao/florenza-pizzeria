@@ -1,0 +1,148 @@
+# 🍕 Projeto Pizzaria – Roadmap de Desenvolvimento
+
+Este documento descreve o plano de ação para o desenvolvimento de um sistema completo de pedidos para uma pizzaria. O projeto envolve a criação do front-end, back-end, banco de dados, autenticação, chatbot, painel administrativo, e muito mais.
+
+---
+
+## 🧱 Fase 1 – Planejamento e Setup Inicial
+🎯 Objetivo: Preparar o ambiente de desenvolvimento e repositórios
+
+- [X] Criar organização e repositórios no GitHub:
+  - [X] `pizzaria-frontend`
+  - [X] `pizzaria-backend`
+- [ ] Configurar ESLint, Prettier e `.editorconfig`
+- [ ] Escrever `README.md` inicial com escopo e descrição
+- [ ] Configurar monorepo com Turborepo (opcional)
+- [ ] Escolher hospedagem:
+  - [ ] Vercel (frontend)
+  - [ ] Railway ou Render (backend)
+- [ ] Configurar CI/CD com GitHub Actions:
+  - [ ] Deploy automático do front
+  - [ ] Deploy e testes do back
+
+---
+
+## 💽 Fase 2 – Modelagem e Banco de Dados
+🎯 Objetivo: Definir o modelo relacional e configurar o banco
+
+- [ ] Criar modelo ER (MER)
+- [ ] Configurar Prisma ORM
+- [ ] Escrever `schema.prisma` com entidades:
+  - Usuário, Endereço, Pedido, Produto, PizzaPersonalizada, Funcionário, LogAtividade, etc.
+- [ ] Executar `npx prisma migrate dev`
+- [ ] Popular o banco com dados de exemplo (`seed.ts`)
+- [ ] Configurar conexão com PostgreSQL local/cloud (ex: Railway)
+
+---
+
+## ⚙️ Fase 3 – Backend com NestJS
+🎯 Objetivo: Criar API REST com estrutura limpa, modular e escalável
+
+- [ ] Criar projeto NestJS
+- [ ] Estruturar pastas por domínio
+- [ ] Implementar módulos principais:
+  - [ ] Autenticação (JWT, bcrypt)
+  - [ ] CRUD de Produtos
+  - [ ] CRUD de Pedidos
+  - [ ] Personalização de pizzas
+  - [ ] Acompanhamento de pedido via WebSocket
+  - [ ] Middleware de autenticação e roles
+  - [ ] DTOs com validação (class-validator ou Zod)
+- [ ] Integração com Prisma (serviço de banco de dados)
+- [ ] Implementar testes com Jest:
+  - [ ] Testes unitários
+  - [ ] Testes de integração
+
+---
+
+## 🎨 Fase 4 – Front-End com Next.js
+🎯 Objetivo: Desenvolver a interface do cliente e do painel administrativo
+
+- [ ] Criar projeto com Next.js 14 + TypeScript
+- [ ] Configurar:
+  - [ ] Tailwind CSS
+  - [ ] shadcn/ui ou Radix UI
+  - [ ] React Hook Form + Zod
+  - [ ] React Query (TanStack)
+  - [ ] Axios ou Fetch API
+- [ ] Criar layout base (Header, Footer, etc.)
+
+### Páginas públicas:
+- [ ] Página institucional (história, contato)
+- [ ] Página de cardápio
+- [ ] Montagem de pizza personalizada
+- [ ] Carrinho e checkout
+- [ ] Rastreamento de pedido
+
+### Páginas privadas:
+- [ ] Login / Cadastro
+- [ ] Dashboard administrativo
+- [ ] Gestão de produtos e pedidos
+- [ ] Controle de estoque e disponibilidade
+- [ ] Configuração do chatbot
+
+---
+
+## 🤖 Fase 5 – Chatbot Customizável
+🎯 Objetivo: Permitir ao admin configurar mensagens do chatbot
+
+- [ ] Backend:
+  - [ ] Endpoints de configuração
+  - [ ] Lógica de exibição de mensagens dinâmicas
+- [ ] Frontend:
+  - [ ] Componente de chatbot fixo
+  - [ ] Tela de configuração no painel admin
+
+---
+
+## 🛡️ Fase 6 – Segurança e LGPD
+🎯 Objetivo: Garantir segurança dos dados e conformidade com LGPD
+
+- [ ] Criptografia de senhas (bcrypt)
+- [ ] Termo de consentimento no checkout
+- [ ] Política de privacidade no rodapé
+- [ ] Middleware de roles (admin, operador)
+- [ ] Logout por inatividade
+- [ ] Endpoint de exclusão de conta
+- [ ] Proteções contra XSS e CSRF
+
+---
+
+## 🧪 Fase 7 – Testes e Validação
+🎯 Objetivo: Garantir qualidade e confiabilidade do sistema
+
+- [ ] Backend:
+  - [ ] Testes unitários (Jest)
+  - [ ] Testes de integração
+- [ ] Frontend:
+  - [ ] Testes de componentes (React Testing Library)
+  - [ ] Testes E2E (Cypress ou Playwright)
+- [ ] Teste completo do fluxo de pedido
+- [ ] Testes de autenticação e controle de acesso
+
+---
+
+## 🚀 Fase 8 – Deploy e Go Live
+🎯 Objetivo: Publicar o sistema em produção
+
+- [ ] Registrar domínio (ex: pizzariajoao.com.br)
+- [ ] Apontar domínio para o frontend (Vercel)
+- [ ] Configurar ambiente de produção no backend
+- [ ] Deploy do PostgreSQL cloud (ex: Railway)
+- [ ] Testes finais em produção
+- [ ] Apresentar ao dono da pizzaria
+
+---
+
+## 📚 Fase 9 – Documentação e Aprendizado
+🎯 Objetivo: Consolidar conhecimento e deixar projeto pronto para o portfólio
+
+- [ ] Criar `/docs` com documentação técnica
+- [ ] Escrever ADRs (decisões de arquitetura)
+- [ ] Criar artigo sobre o projeto (Medium, Dev.to ou LinkedIn)
+- [ ] Documentar aprendizados no repositório
+- [ ] Adicionar o projeto ao portfólio
+
+---
+
+> _Projeto feito com amor, código limpo e pizza quente!_
